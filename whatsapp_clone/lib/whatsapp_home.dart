@@ -14,52 +14,13 @@ class _WhatsAppHomeState extends State<WhatsAppHome> with SingleTickerProviderSt
   @override
   void initState() {
     super.initState();
-    _tabController = new TabController(length: 4, vsync: this, initialIndex: 1);
+    // Add Tab Controller Here
   }
 
   @override
   Widget build(BuildContext ctx) {
     return new Scaffold(
-      // EVERY ELEMENT OF THE APP NAVBAR IS INSIDE THIS APPBAR WIDGET
-      appBar: new AppBar(
-        title: new Text("WhatsApp"),
-        elevation: 0.7,
-        bottom: new TabBar(
-          controller: _tabController,
-          indicatorColor: Colors.white,
-          tabs: <Widget>[
-            new Tab(icon: new Icon(Icons.camera_alt)),
-            new Tab(text: "CHATS"),
-            new Tab(text: "STATUS"),
-            new Tab(text: "CALLS")
-          ],
-        ),
-        actions: <Widget>[
-          new Icon(Icons.search),
-          new Padding(padding: const EdgeInsets.symmetric(horizontal: 5.0)),
-          new Icon(Icons.more_vert),
-          new Padding(padding: const EdgeInsets.symmetric(horizontal: 5.0)),
-        ],
-      ),
-             // BODY ELEMENTS INSIDE THIS WIDGET
-      body: new TabBarView(
-        controller: _tabController,
-        children: <Widget>[
-          new CameraScreen(),
-          new ChatScreen(),
-          new StatusScreen(),
-          new CallsScreen(),
-        ],
-      ),
-
-      // FLOATING NEW CHAT BUTTON
-      floatingActionButton: new FloatingActionButton(
-        backgroundColor: Theme.of(ctx).accentColor,
-        child: new Icon(
-            Icons.message,
-          color: Colors.white),
-        onPressed: () => print("open chats"),
-      ),
+      // The scaffold of our app is where every element of the UI must go inside
     );
   }
 }
