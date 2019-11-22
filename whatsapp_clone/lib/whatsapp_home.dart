@@ -41,7 +41,7 @@ class _WhatsAppHomeState extends State<WhatsAppHome> with SingleTickerProviderSt
           new Padding(padding: const EdgeInsets.symmetric(horizontal: 5.0)),
         ],
       ),
-      // BODY ELEMENTS INSIDE THIS WIDGET
+             // BODY ELEMENTS INSIDE THIS WIDGET
       body: new TabBarView(
         controller: _tabController,
         children: <Widget>[
