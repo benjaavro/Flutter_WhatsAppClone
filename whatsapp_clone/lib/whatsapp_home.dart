@@ -19,7 +19,7 @@ class _WhatsAppHomeState extends State<WhatsAppHome> with SingleTickerProviderSt
 
   @override
   Widget build(BuildContext ctx) {
-    return new Scaffold(
+    return Scaffold(
       // The scaffold of our app is where every element of the UI must go inside
     );
   }
